@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block cuerpo -%}
+    <h1>{{ entity.titulo }}<h1>
+
+                <h6>{{ entity.fechaPub|date('Y-m-d H:i:s') }}</h6>
+                
+            
+           <img src="{{ asset('bundles/unimarca/imagenes/'~ entity.foto  ~ '') }}" width=30% height=30%/><br>
+           
+           {{ entity.contenido }}<br><br>
+           {{ entity.autor }}<br>
+           
+           
+         {% for comentario in entity.comentarioss %}
+            {{comentario.titulo}}
+            <br/>
+         {% endfor%} 
+           
+            
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('noticias') }}">
+            Volver a la pagina principal
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">
+            Edit
+        </a><br>
+        
+        <a href="{{ path('comentarios_new') }}">
+                Create a new entry
+      
+</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+categorias:
+    path:     /
+    defaults: { _controller: "uniMarcaBundle:categorias:index" }
+
+categorias_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniMarcaBundle:categorias:show" }
+
+uni_marca_noticias:
+    resource: "@uniMarcaBundle/Resources/config/routing/conSeguridad/categoriaSeguridad.yml"
+    prefix:   /conSeguridad

@@ -1,0 +1,10 @@
+comentarios:
+    path:     /
+    defaults: { _controller: "uniMarcaBundle:comentarios:index" }
+
+comentarios_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniMarcaBundle:comentarios:show" }
+uni_marca_noticias:
+    resource: "@uniMarcaBundle/Resources/config/routing/conSeguridad/comentarioSeguridad.yml"
+    prefix:   /conSeguridad

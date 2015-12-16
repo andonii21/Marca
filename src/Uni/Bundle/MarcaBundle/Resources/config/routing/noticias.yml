@@ -1,0 +1,30 @@
+noticias:
+    path:     /
+    defaults: { _controller: "uniMarcaBundle:noticias:index" }
+
+noticias_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniMarcaBundle:noticias:show" }
+
+
+    
+noticias_buscar_titulo:
+    path:     /buscartitulo
+    defaults: { _controller: "uniMarcaBundle:noticias:buscarTitulo" }
+    
+noticias_responder_titulo:
+    path:     /respondertitulo
+    defaults: { _controller: "uniMarcaBundle:noticias:responderTitulo" }
+    requirements: { _method: post|put }
+    
+noticias_buscar_titulo_like:
+    path:     /buscartitulolike
+    defaults: { _controller: "uniMarcaBundle:noticias:buscarTitulolike" }
+    
+noticias_responder_titulo_like:
+    path:     /respondertitulolike
+    defaults: { _controller: "uniMarcaBundle:noticias:responderTitulolike" }
+    requirements: { _method: post|put }
+uni_marca_noticias:
+    resource: "@uniMarcaBundle/Resources/config/routing/conSeguridad/noticiaSeguridad.yml"
+    prefix:   /conSeguridad

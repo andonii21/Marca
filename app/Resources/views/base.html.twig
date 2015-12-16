@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}<link href="{{ asset('bundles/unimarca/css/marca.css') }}" type="text/css" rel="stylesheet" />{% endblock %}
+    </head>
+    <body>
+        
+        <div id="titulo">
+            {% block cabecera %}
+              <h1>MARCA</h1>
+            {% endblock %}
+        </div>
+       
+         <div id="cuerpo">
+            {% block cuerpo %}{% endblock %}
+        </div>
+        
+         <div id="pie">
+            {% block pie %}Bienvenidos a www.nmarca.com{% endblock %}
+        </div>
+       
+    </body>
+</html>
+
+</html>
